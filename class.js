@@ -2,8 +2,14 @@
 
 class Project {
 	constructor (param){
+		this.name = "project"
 		console.log("constructor" + param);
 	}
+
+	static getDefualtId (){
+		return 1;
+	}
+
 	getTaskCount (){
 		return 50;
 	}
@@ -13,7 +19,8 @@ class Software extends Project{
 
 	constructor (param) {
 		super(param);	
-		console.log("software constructor");
+		this.name = this.name + "software";
+		console.log("software constructor", this.name);
 	}
 	getTaskCount (){
 		return 70;
@@ -41,3 +48,4 @@ let softwareProject = {
 
 Object.setPrototypeOf(softwareProject, project);
 console.log(softwareProject.getTaskCount())
+console.log(Project.getDefualtId())
