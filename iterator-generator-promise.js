@@ -27,3 +27,4 @@ function doAsync() {
 console.log(doAsync().then(function(){
 	console.log("done")
 }));
+
